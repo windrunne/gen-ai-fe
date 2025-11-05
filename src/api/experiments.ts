@@ -25,7 +25,7 @@ export const experimentsApi = {
    * Get experiment by ID
    */
   get: async (id: number): Promise<ExperimentDetail> => {
-    const response = await apiClient.get<ExperimentDetail>(`/experiments/${id}`)
+    const response = await apiClient.get<ExperimentDetail>(`/experiments/${id}/`)
     return response.data
   },
 
@@ -33,6 +33,6 @@ export const experimentsApi = {
    * Delete experiment
    */
   delete: async (id: number): Promise<void> => {
-    await apiClient.delete(`/experiments/${id}`)
+    await apiClient.delete(`/experiments/${id}/`)
   },
 }
